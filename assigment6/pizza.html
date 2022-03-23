@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<title>Pizza</title>   
+<body>
+        <form>
+            <h1>Slippery Rock Pizza House</h1> <br>
+            <b>*Required</b> <br>
+            <h3>Step 1: Enter your name, address and phone number:</h3> <!--Step 1 in the HTML page begins here with text input boxes-->
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Name:* &nbsp; &nbsp; &nbsp;
+                <input type="text" id="orderName" size="25"></p>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Address*: &nbsp;
+                <input type="text" id="orderAddress" size="25"></p>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">City*: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <!--Reason for the nbsp being used so much is to make the boxes align with eachother, there's probably a better way to do it but I couldn't figure it out-->
+                <input type="text" id="orderCity" size="26"> &nbsp; 
+                State*: &nbsp;<input type="text" id="orderState" size="1"> &nbsp;ZIP Code*: &nbsp;
+                <input type="text" id="orderZIP" size="1"></p>
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Phone*: &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="orderPhone" size="26"></p> <br>
+
+            <h3>Step 2: Select the size of your pizza:</h3>
+            <label>
+                <input type="radio" name="answer">Small &nbsp; &nbsp; <!--Reason why all the radio boxes are named after the same string is because it makes it so that you can only select one box-->
+                <input type="radio" name="answer">Medium &nbsp; &nbsp; 
+                <input type="radio" name="answer">Large
+            </label> <br>
+            
+            <h3>Step 3: Select the pizza toppings you want:</h3> <!--Step 3 begins here with checkboxes-->
+            <p>
+                <input type="checkbox">Pepperoni &nbsp; 
+                <input type="checkbox">Canadian Bacon &nbsp; 
+                <input type="checkbox">Sausage
+            </p>
+            <p>
+                <input type="checkbox">Mushrooms &nbsp; 
+                <input type="checkbox">Pineapple &nbsp; 
+                <input type="checkbox">Black Olives
+            </p>
+            <input type="button" value="Submit Order" onclick="orderReceived()">
+            <input type="reset" value="Reset" onclick="orderReset()">
+        </form> 
+        <script> // Javascript alerts begins here
+            function orderReceived() {
+                alert("Your order has been received!")
+            }
+            function orderReset() {
+                alert("Your order has been reset!")
+            }
+        </script>
+    </body>
+</html>

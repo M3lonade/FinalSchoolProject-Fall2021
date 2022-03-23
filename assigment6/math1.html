@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="result"></p>
+
+        <script>
+            var sum = myAdd(4, 7);
+            document.getElementById("result").innerHTML = sum;
+
+            function myAdd(a, b) {
+                return a + b;
+            }
+        </script>
+        <br> <hr>
+        <p id="output"></p>
+        
+        <script>
+            myCar();
+
+            function myCar() {
+                var carName = "Mustang";
+                var carType = "Ford"
+                document.getElementById("output").innerHTML = carType + " " + carName;
+            }
+        </script>
+        <br> <hr>
+        <p id="sonuc"></p>
+
+        <script>
+            var x = myFunction(4, 2);
+            document.getElementById("sonuc").innerHTML = x;
+            function myFunction(a, b) {
+                var Bill = a + b;
+                var Gates = a * b;
+                return Bill + Gates;
+            }
+        </script>
+
+        <h2 style="text-align: center;">GUESS THE NUMBER STUPID IDIOT</h2>
+        <p style="text-align: center;">GUESS A NUMBER BETWEEN 1 AND 4 IF YOU GET IT RIGHT YOU GET TO LIVE</p>
+        <input type="button" value="Generate the random number" onclick="randomNumber()">
+        <hr>
+        <div id="guess"></div>
+        
+        <script type="text/javascript">
+            function randomNumber() {
+                var number;
+                number = Math.floor(Math.random()*4) + 1;
+                document.getElementById('guess').innerHTML = 
+                'My number was ' + number + '. Were you correct?';
+            }
+        </script>
+        <br> <hr>
+        <p id="sonuc1"></p>
+
+        <script>
+            var x1 = multipleFunction(1, 4, 6, 8, 5)
+            document.getElementById("sonuc1").innerHTML = x1;
+
+            function multipleFunction(a, b, c, d, e) {
+                var result1;
+                result1 = a + b + c + d + e
+                return result1;
+            }
+        </script>
+        <br> <hr>
+        <p id="demo2"></p>
+        <script>
+            function nameFunction(first_name, last_name) {
+                return "I am" + " " + first_name + " " + last_name + ".";
+            }
+            function schoolFunction(school_name) {
+                return "I study at" + " " + school_name
+            }
+            document.getElementById("demo2").innerHTML = nameFunction("Halil", "Tanribilen") + " " + schoolFunction("Slippery Rock");
+        </script>
+        <br> <hr>
+        <script type="text/javascript">
+            var age = 21;
+            if(age > 18) {
+                document.write("You can get a driver's license")
+            }
+                else {
+                    document.write("You aren't old enough to get a driver's license")
+                }
+        </script>
+    </body>
+</html>
